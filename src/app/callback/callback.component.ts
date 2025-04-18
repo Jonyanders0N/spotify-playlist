@@ -4,11 +4,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AccessToken } from '../shared/models/accessToken.model';
 
 @Component({
-  selector: 'app-callback',
-  standalone: true,
-  imports: [],
-  templateUrl: './callback.component.html',
-  styleUrl: './callback.component.scss'
+    selector: 'app-callback',
+    imports: [],
+    templateUrl: './callback.component.html',
+    styleUrl: './callback.component.scss'
 })
 export class CallbackComponent {
   accessToken?: string;
