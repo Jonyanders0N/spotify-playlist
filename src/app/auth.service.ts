@@ -1,8 +1,9 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable, tap } from 'rxjs';
 import { AccessToken } from './shared/models/accessToken.model';
 import { environment } from './environment';
+import { Injectable } from '@angular/core';
+import { Observable, tap } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
