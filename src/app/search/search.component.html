@@ -2,20 +2,20 @@
     <header class="header"></header>
     <section class="search"></section>
     <main class="content">
-        <form class="example-form">
+        <form [formGroup]="searchForm" class="example-form">
             <mat-form-field class="example-full-width">
                 <mat-label>Artist</mat-label>
-                <input type="email" matInput [formControl]="artistFormControl" placeholder="Ex. Radiohead">
-                @if (!artistFormControl.hasError('required')) {
+                <input type="text" matInput formControlName="artist" placeholder="Ex. Radiohead">
+                @if (!searchForm.hasError('required')) {
                 <mat-error>Please enter an artist name</mat-error>
                 }
-                @if (artistFormControl.hasError('required')) {
+                @if (searchForm.hasError('required')) {
                 <mat-error>Artist name is <strong>required</strong></mat-error>
                 }
             </mat-form-field>
             <section>
                 <div class="example-button-row">
-                    <button (click)="searchArtist()" mat-stroked-button [disabled]="!artistFormControl.valid">Basic</button>
+                    <button (click)="searchArtist()" mat-stroked-button [disabled]="!searchForm.valid">Submit</button>
                 </div>
             </section>
         </form>
